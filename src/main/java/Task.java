@@ -1,5 +1,4 @@
 import java.time.LocalDate;
-import java.util.Objects;
 
 public class Task {
         private String Owner;
@@ -10,8 +9,6 @@ public class Task {
         Owner = owner;
         Description = description;
         this.deadline = deadline;
-
-        //TODO ADD GOOD VALIDATION
 
         if (deadline.equals(LocalDate.now()))
         {
