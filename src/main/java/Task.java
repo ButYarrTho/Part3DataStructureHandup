@@ -15,15 +15,6 @@ public class Task {
             System.out.println("UR LATE U GET 0 LMAFOOOOOOOOOOOOO");
         }
     }
-    ///
-    ///
-
-
-    ///
 }
-
-//////
-////////////////////////////////
-/////////
 
 
