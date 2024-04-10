@@ -12,7 +12,7 @@ public class Task {
 
         if (deadline.equals(LocalDate.now()))
         {
-            System.out.println("UR LATE U GET 0 LMAFOOOOOOOOOOOOOO");
+            System.out.println("UR LATE U GET 0 LMAFOOOOOOOOOOOOO");
         }
     }
 }
