@@ -11,7 +11,7 @@ public class Task {
         Description = description;
         this.deadline = deadline;
 
-        //TODO ADD GOOD VALIDATION YES
+        //TODO ADD GOOD VALIDATION
 
         if (deadline.equals(LocalDate.now()))
         {
