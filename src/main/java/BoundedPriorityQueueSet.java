@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+import java.util.NoSuchElementException;
 
 public class BoundedPriorityQueueSet {
 
@@ -44,4 +45,40 @@ public class BoundedPriorityQueueSet {
         tasks.add(position, newTask);
     }
 
+    public boolean offer(Task newTask) {
+        if (isFull() || tasks.contains(newTask)) {
+            return false;
+        }
+        int position = calcPosition(newTask);
+        tasks.add(position, newTask);
+        return true;
+    }
+
+    public Task element() {
+        if (isEmpty()) {
+            throw new NoSuchElementException("Queue is empty");
+        }
+        return tasks.getFirst();
+    }
+
+    public Task peek() {
+        if (isEmpty()) {
+            return null;
+        }
+        return tasks.getFirst();
+    }
+
+    public Task remove() {
+        if (isEmpty()) {
+            throw new NoSuchElementException("Queue is empty");
+        }
+        return tasks.removeFirst();
+    }
+
+    public Task poll() {
+        if (isEmpty()) {
+            return null;
+        }
+        return tasks.removeFirst();
+    }
 }
