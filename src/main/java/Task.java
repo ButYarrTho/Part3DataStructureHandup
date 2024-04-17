@@ -6,6 +6,12 @@ public class Task {
         private String  Description;
         private LocalDate deadline = LocalDate.of(2024, 4, 16);
 
+    /**
+     * Constructs a Task object with the specified owner, description, and deadline
+     * @param owner The owner of the task
+     * @param description The description of the task
+     * @param deadline The deadline of the task
+     */
     public Task(String owner, String description, LocalDate deadline) {
         Owner = owner;
         Description = description;
@@ -13,7 +19,7 @@ public class Task {
 
         if (deadline.equals(LocalDate.now()))
         {
-            System.out.println("UR LATE U GET 0 LMAFOOOOOOOOOOOOO");
+            System.out.println("Ur past the deadline");
         }
     }
     public String getOwner() {
@@ -40,7 +46,12 @@ public class Task {
         this.deadline = deadline;
     }
 
-    //TODO; check if right
+
+    /**
+     * Checks if two tasks are equal.
+     * @param o The object to compare.
+     * @return True if the tasks are equal, false otherwise.
+     */
 
     @Override
     public boolean equals(Object o) {
@@ -49,14 +60,19 @@ public class Task {
         Task task = (Task) o;
         return Objects.equals(Owner, task.Owner) && Objects.equals(Description, task.Description) && Objects.equals(deadline, task.deadline);
     }
-
-        //TODO; check if right
+    /**
+     * Generates a hash code for the task
+     * @return The hash code
+     */
     @Override
     public int hashCode() {
         return Objects.hash(Owner, Description, deadline);
     }
 
-
+    /**
+     * Returns a string representation of the task
+     * @return A string representation of the task
+     */
     @Override
     public String toString() {
         return "Task{" +
