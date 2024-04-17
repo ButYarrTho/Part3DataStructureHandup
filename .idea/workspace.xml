@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99bc54be-7469-4d12-a9a8-c3c5c197aea6" name="Changes" comment="Created new package" />
+    <list default="true" id="99bc54be-7469-4d12-a9a8-c3c5c197aea6" name="Changes" comment="Created new package">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,6 +56,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "G:/IntelliJ",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "vue.rearranger.settings.migration": "true"
   }
@@ -67,6 +73,8 @@
       <updated>1712747783820</updated>
       <workItem from="1712747784933" duration="7000" />
       <workItem from="1712748152152" duration="224000" />
+      <workItem from="1713206218476" duration="575000" />
+      <workItem from="1713361774143" duration="51000" />
     </task>
     <task id="LOCAL-00001" summary="Created new package">
       <option name="closed" value="true" />

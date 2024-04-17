@@ -28,11 +28,21 @@
             return tasks.size() >= boundedSize;
         }
 
-        private int calcPosition(Task newTask) {
-            //TODO; update method to work
+        private int calcPosition(Task task) throws DuplicateElementException {
+            for (int i = 0; i < tasks.size(); i++) {
+                Task currentTask = tasks.get(i);
 
-            //can use binary search or linear search
-            return 0;
+                int comparison = task.getDeadline().compareTo(currentTask.getDeadline());
+                if (comparison == 0) {
+
+                    throw new DuplicateElementException("Task already exists in the queue");
+                } else if (comparison < 0) {
+
+                    return i;
+                }
+            }
+
+            return tasks.size();
         }
 
         public void add(Task newTask) throws DuplicateElementException {
@@ -46,7 +56,7 @@
             tasks.add(position, newTask);
         }
 
-        public boolean offer(Task newTask) {
+        public boolean offer(Task newTask) throws DuplicateElementException {
             if (isFull() || tasks.contains(newTask)) {
                 return false;
             }
