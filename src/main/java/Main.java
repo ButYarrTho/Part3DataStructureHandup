@@ -8,10 +8,43 @@ public class Main {
 
     public static void main(String[] args) {
         randomchoice();
+        int choice;
 
         Scanner scanner = new Scanner(System.in);
+        do {
+            printMenu();
+            System.out.print("Enter your choice: ");
+            choice = scanner.nextInt();
+            scanner.nextLine(); // Consume newline
 
+            switch (choice) {
+                case 1:
+                    addTask(scanner);
+                    break;
+                case 2:
+                    viewNextTask();
+                    break;
+                case 3:
+                    markTaskAsDone();
+                    break;
+                case 4:
+                    viewRemainingTasks();
+                    break;
+                case 5:
+                    viewSpaceRemaining();
+                    break;
+                case 6:
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+            }
+        } while (choice != 6);
+
+        scanner.close();
     }
+
+
 
     private static void randomchoice() {
         int randomNumber = random.nextInt(2);
