@@ -58,11 +58,45 @@ public class Main {
             System.out.println("Queue is full. Task cannot be added.");
         }
     }
+    private static void viewNextTask() {
+        Task nextTask = taskQueue.peek();
+        if (nextTask != null) {
+            System.out.println("Next Task: " + nextTask);
+        } else {
+            System.out.println("No tasks in the queue.");
+        }
+    }
 
+    private static void markTaskAsDone() {
+        try {
+            Task doneTask = taskQueue.poll();
+            if (doneTask != null) {
+                System.out.println("Marked task as done: " + doneTask);
+            } else {
+                System.out.println("No tasks in the queue");
+            }
+            if (taskQueue.isEmpty()) {
+                System.out.println("Congratulations All tasks are completed");
+            }
+        } catch (NoSuchElementException e) {
+            System.out.println("No tasks in the queue");
+        }
+    }
 
+    private static void viewRemainingTasks() {
+        System.out.println("Number of tasks remaining: " + taskQueue.size());
+    }
 
-
+    private static void viewSpaceRemaining() {
+        System.out.println("Space remaining in the queue: " + (taskQueue.isFull() ? "0" : (taskQueue.size() - taskQueue.size())));
+    }
 }
+
+
+
+
+
+
 
 
 
