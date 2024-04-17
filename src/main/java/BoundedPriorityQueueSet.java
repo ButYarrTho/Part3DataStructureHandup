@@ -39,6 +39,13 @@
             return tasks.size() >= boundedSize;
         }
 
+        /**
+         * Calculates the position to insert a new task in the queue based on its deadline.
+         * If a task with the same deadline already exists, it throws a DuplicateElementException.
+         *
+         * @param task The task to be inserted into the queue
+        */
+
         private int calcPosition(Task task) throws DuplicateElementException {
             for (int i = 0; i < tasks.size(); i++) {
                 Task currentTask = tasks.get(i);
